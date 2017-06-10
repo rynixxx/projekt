@@ -88,6 +88,7 @@ namespace app
                 punkty.Text = "0";
                 timer1.Enabled = true;
                 gameover.Visible = false;
+                playground.BackColor = Color.White;
             }
         }
 
