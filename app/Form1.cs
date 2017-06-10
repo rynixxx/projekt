@@ -29,6 +29,10 @@ namespace app
             this.Bounds = Screen.PrimaryScreen.Bounds;
             deska.Top = playground.Bottom - (playground.Bottom / 10);
 
+            gameover.Left = (playground.Width / 2) - (gameover.Width / 2);
+            gameover.Top = (playground.Height / 2) - (gameover.Height / 2);
+            gameover.Visible = false;
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -71,5 +75,7 @@ namespace app
         {
             if(e.KeyCode == Keys.Escape) { this.Close(); }
         }
+
+       
     }
 }
