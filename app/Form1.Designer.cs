@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.playground = new System.Windows.Forms.Panel();
             this.deska = new System.Windows.Forms.PictureBox();
             this.pilka = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.playground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deska)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pilka)).BeginInit();
@@ -57,11 +59,16 @@
             // 
             // pilka
             // 
+            this.pilka.BackColor = System.Drawing.Color.DarkRed;
             this.pilka.Location = new System.Drawing.Point(427, 110);
             this.pilka.Name = "pilka";
             this.pilka.Size = new System.Drawing.Size(20, 20);
             this.pilka.TabIndex = 1;
             this.pilka.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -71,6 +78,7 @@
             this.Controls.Add(this.playground);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.playground.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.deska)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pilka)).EndInit();
@@ -83,6 +91,7 @@
         private System.Windows.Forms.Panel playground;
         private System.Windows.Forms.PictureBox pilka;
         private System.Windows.Forms.PictureBox deska;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
