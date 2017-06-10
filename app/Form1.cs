@@ -38,6 +38,14 @@ namespace app
             pilka.Left += speed_left;
             pilka.Top += speed_top;
 
+            if (pilka.Bottom >= deska.Top && pilka.Bottom <= deska.Bottom && pilka.Left >= deska.Left && pilka.Right <= deska.Right)
+            {
+                speed_top += 2;
+                speed_left += 2;
+                speed_top = -speed_top;
+                point += 1;
+            }
+
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
