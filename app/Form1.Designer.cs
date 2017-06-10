@@ -28,12 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.playground = new System.Windows.Forms.Panel();
+            this.deska = new System.Windows.Forms.PictureBox();
+            this.pilka = new System.Windows.Forms.PictureBox();
+            this.playground.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.deska)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pilka)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // playground
+            // 
+            this.playground.Controls.Add(this.pilka);
+            this.playground.Controls.Add(this.deska);
+            this.playground.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.playground.Location = new System.Drawing.Point(0, 0);
+            this.playground.Name = "playground";
+            this.playground.Size = new System.Drawing.Size(1064, 529);
+            this.playground.TabIndex = 0;
+            // 
+            // deska
+            // 
+            this.deska.BackColor = System.Drawing.SystemColors.Desktop;
+            this.deska.Location = new System.Drawing.Point(431, 497);
+            this.deska.Name = "deska";
+            this.deska.Size = new System.Drawing.Size(150, 20);
+            this.deska.TabIndex = 0;
+            this.deska.TabStop = false;
+            // 
+            // pilka
+            // 
+            this.pilka.Location = new System.Drawing.Point(427, 110);
+            this.pilka.Name = "pilka";
+            this.pilka.Size = new System.Drawing.Size(20, 20);
+            this.pilka.TabIndex = 1;
+            this.pilka.TabStop = false;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1064, 529);
+            this.Controls.Add(this.playground);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.playground.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.deska)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pilka)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel playground;
+        private System.Windows.Forms.PictureBox pilka;
+        private System.Windows.Forms.PictureBox deska;
     }
 }
 
