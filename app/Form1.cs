@@ -13,7 +13,9 @@ namespace app
     public partial class Form1 : Form
     {
 
-        public int spped_left = 4;
+        public int speed_left = 4;
+        public int speed_top = 4;
+        public int point = 0;
 
         public Form1()
         {
@@ -31,6 +33,10 @@ namespace app
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            deska.Left = Cursor.Position.X - (deska.Width / 2);
+
+            pilka.Left += speed_left;
+            pilka.Top += speed_top;
 
         }
 
