@@ -46,11 +46,28 @@ namespace app
                 point += 1;
             }
 
+            if(pilka.Left <= playground.Left)
+            {
+                speed_left = -speed_left;
+            }
+            if (pilka.Right >= playground.Right)
+            {
+                speed_left = -speed_left;
+            }
+            if(pilka.Top <= playground.Top)
+            {
+                speed_top = -speed_top;
+            }
+            if (pilka.Bottom >= playground.Bottom)
+            {
+                timer1.Enabled = false;
+            }
+
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Escape) { this.Close()}
+            if(e.KeyCode == Keys.Escape) { this.Close(); }
         }
     }
 }
