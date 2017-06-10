@@ -67,6 +67,7 @@ namespace app
             if (pilka.Bottom >= playground.Bottom)
             {
                 timer1.Enabled = false;
+                gameover.Visible = true;
             }
 
         }
@@ -74,6 +75,17 @@ namespace app
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Escape) { this.Close(); }
+            if(e.KeyCode == Keys.F1)
+            {
+                pilka.Top = 50;
+                pilka.Left = 50;
+                speed_left = 4;
+                speed_top = 4;
+                point = 0;
+                punkty.Text = "0";
+                timer1.Enabled = true;
+                gameover.Visible = false;
+            }
         }
 
        
