@@ -44,6 +44,8 @@ namespace app
                 speed_left += 2;
                 speed_top = -speed_top;
                 point += 1;
+                punkty.Text = point.ToString();
+
             }
 
             if(pilka.Left <= playground.Left)

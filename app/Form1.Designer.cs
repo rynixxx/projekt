@@ -33,6 +33,8 @@
             this.deska = new System.Windows.Forms.PictureBox();
             this.pilka = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.wynik = new System.Windows.Forms.Label();
+            this.punkty = new System.Windows.Forms.Label();
             this.playground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deska)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pilka)).BeginInit();
@@ -40,6 +42,8 @@
             // 
             // playground
             // 
+            this.playground.Controls.Add(this.punkty);
+            this.playground.Controls.Add(this.wynik);
             this.playground.Controls.Add(this.pilka);
             this.playground.Controls.Add(this.deska);
             this.playground.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -71,6 +75,26 @@
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // wynik
+            // 
+            this.wynik.AutoSize = true;
+            this.wynik.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.wynik.Location = new System.Drawing.Point(12, 9);
+            this.wynik.Name = "wynik";
+            this.wynik.Size = new System.Drawing.Size(167, 55);
+            this.wynik.TabIndex = 2;
+            this.wynik.Text = "Wynik:";
+            // 
+            // punkty
+            // 
+            this.punkty.AutoSize = true;
+            this.punkty.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.punkty.Location = new System.Drawing.Point(175, 9);
+            this.punkty.Name = "punkty";
+            this.punkty.Size = new System.Drawing.Size(51, 55);
+            this.punkty.TabIndex = 3;
+            this.punkty.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -81,6 +105,7 @@
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.playground.ResumeLayout(false);
+            this.playground.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deska)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pilka)).EndInit();
             this.ResumeLayout(false);
@@ -93,6 +118,8 @@
         private System.Windows.Forms.PictureBox pilka;
         private System.Windows.Forms.PictureBox deska;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label punkty;
+        private System.Windows.Forms.Label wynik;
     }
 }
 
