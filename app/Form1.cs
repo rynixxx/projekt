@@ -50,6 +50,9 @@ namespace app
                 point += 1;
                 punkty.Text = point.ToString();
 
+                Random r = new Random();
+                playground.BackColor = Color.FromArgb(r.Next(150, 255), r.Next(150, 255), r.Next(150, 255));
+
             }
 
             if(pilka.Left <= playground.Left)
